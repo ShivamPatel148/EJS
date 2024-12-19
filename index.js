@@ -5,6 +5,10 @@ const path = require("path");
 
 const port = 8080;
 
+// Serving Static Files
+// app.use(express.static("public"));
+app.use(express.static(path.join(__dirname,"public")));
+
 // Our code is in a situation where this code will work only if we run our server by staying inside the .js directory.
 //otherwise our views will not be able to render.
 app.set("view engine", "ejs");
